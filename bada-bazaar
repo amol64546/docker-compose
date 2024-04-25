@@ -1,0 +1,11 @@
+# Use the official OpenJDK image as a parent image
+FROM openjdk:21-jdk
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the JAR file from your host to the container
+COPY bada-bazaar.jar .
+
+# Command to run on container start
+CMD ["java", "-jar", "bada-bazaar.jar"]
